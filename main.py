@@ -4,6 +4,7 @@ from info import character_description, contacts
 bot = telebot.TeleBot("6760083375:AAEi1PKD10xe48k9xGX_sIqtMUCoYrCRvAU")
 
 
+
 # /start command
 @bot.message_handler(commands=["start"])
 def start(message):
@@ -33,8 +34,7 @@ def filter_car(message):
 @bot.message_handler(func=filter_car)
 def send_secret_photo(message):
     # send photo
-    photo = open('kandinsky-download-1702410706948 (1).png', 'rb')
-    bot.send_photo(message.chat.id, photo)
+    bot.send_photo(message.chat.id, photo = "https://imgur.com/a/sH6gIKG")
 
 
 # /about command
@@ -52,10 +52,10 @@ def about(message):
 @bot.message_handler(commands=["contacts"])
 def contact(message):
     bot.send_message(message.chat.id, "Если вы хотите со мной связаться, вот мои контакты:\n"
-                                      f"Моя почта: {contacts["email"]}\n"
-                                      f"Мой Telegram: {contacts["Telegram"]}\n"
-                                      f"Мой VK: {contacts["VK"]}\n"
-                                      f"Мой GitHub: {contacts["GIT"]}")
+                                      f'Моя почта: {contacts["email"]}\n'
+                                      f'Мой Telegram: {contacts["Telegram"]}\n'
+                                      f'Мой VK: {contacts["VK"]}\n'
+                                      f'Мой GitHub: {contacts["GIT"]}')
 
 
 # answer for /hobby
