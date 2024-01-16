@@ -52,10 +52,10 @@ def about(message):
 @bot.message_handler(commands=["contacts"])
 def contact(message):
     bot.send_message(message.chat.id, "Если вы хотите со мной связаться, вот мои контакты:\n"
-                                      f"Моя почта: {contacts["email"]}\n"
-                                      f"Мой Telegram: {contacts["Telegram"]}\n"
-                                      f"Мой VK: {contacts["VK"]}\n"
-                                      f"Мой GitHub: {contacts["GIT"]}")
+                                      f'Моя почта: {contacts["email"]}\n'
+                                      f'Мой Telegram: {contacts["Telegram"]}\n'
+                                      f'Мой VK: {contacts["VK"]}\n'
+                                      f'Мой GitHub: {contacts["GIT"]}')
 
 
 # answer for /hobby
